@@ -4,17 +4,13 @@
  */
 package q1_lab6;
 
+import java.io.Serializable;
+
 /**
  *
  * @author ASUS
  */
-public class Student {
-   import java.io.Serializable;
-import java.util.*;
-
 public class Student implements Serializable {
-
-    static Scanner sc = new Scanner(System.in);
 
     // khởi tạo biến
     protected String studentID;
@@ -98,5 +94,4 @@ public class Student implements Serializable {
     public void setSchoolStage(String schoolStage) {
         this.schoolStage = schoolStage;
     }
-
 }

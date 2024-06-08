@@ -4,36 +4,47 @@
  */
 package q1_lab6;
 
-import java.util.ArrayList;
-
+import java.io.Serializable;
 /**
  *
- * @author tai.tran
+ * @author hanie
  */
-public class Studentmanager {
-     private ArrayList<Student> arrs = new ArrayList<>();
+import java.util.*;
 
-    public ArrayList<Student> getArrs() {
-        return arrs;
-    }
+public class StudentManager implements Serializable {
 
-    public void setArrs(ArrayList<Student> arrs) {
-        this.arrs = arrs;
+    public StudentManager() {
     }
 
-    public Studentmanager() {
-    }
-    public Student FindStudentById(String studentId)
-    {
-        return null;
-    }
-    
-    public boolean AddStudent(Student stu)
-    {
-        for(Student s:arrs)
-            if(s.getStudentID().equals(stu.getStudentID()))
+    static Scanner sc = new Scanner(System.in);
+
+    // khởi tạo biến list
+    public ArrayList<Student> listStudent = new ArrayList<Student>();
+
+    // check existed & add
+    public boolean addStudent(Student stu) {
+        for (Student s : listStudent) {
+            if (s.getStudentID().equalsIgnoreCase(stu.getStudentID())) {
                 return false;
-        arrs.add(stu);
+            }
+        }
+        listStudent.add(stu);
         return true;
     }
+
+    // find by ID
+    public Student findStudentById(String studentID) {
+        for (Student s : listStudent) {
+            if (s.getStudentID().equalsIgnoreCase(studentID)) {
+                return s;
+            }
+        }
+        return null;
+    }
+
+    // list
+    public ArrayList<Student> getListStudent() {
+        return listStudent;
+    }
+
 }

@@ -2,14 +2,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package q1_lab6;
+package q2_lab6;
 
-import java.util.Scanner;
+/**
+ *
+ * @author ASUS
+ */
+public class Q2_lab6 {
 
-public class Q1_lab6 {
-
-  static Scanner sc = new Scanner(System.in); 
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
-      new MainFrame().setVisible(true);
+        MainFrame frame = new MainFrame();
+        frame.setVisible(true);
     }
+    
 }
